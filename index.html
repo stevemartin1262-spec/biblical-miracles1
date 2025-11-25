@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblical Miracles - God's Power and Love</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #27ae60;
+            --gold: #f1c40f;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            opacity: 0.9;
+        }
+
+        .verse {
+            font-style: italic;
+            margin-top: 1rem;
+            font-size: 1.1rem;
+            border-left: 3px solid var(--gold);
+            padding-left: 1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .intro h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .intro p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .themes-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary);
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .themes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .theme-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-top: 4px solid var(--secondary);
+        }
+
+        .theme-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .theme-header {
+            padding: 1.5rem;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .theme-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.5rem;
+            color: var(--dark);
+        }
+
+        .theme-info h3 {
+            margin-bottom: 0.3rem;
+        }
+
+        .theme-content {
+            padding: 1.5rem;
+        }
+
+        .theme-content p {
+            margin-bottom: 1rem;
+        }
+
+        .miracles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .miracle-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .miracle-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .miracle-header {
+            padding: 1.5rem;
+            background: var(--secondary);
+            color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .miracle-reference {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: var(--dark);
+            text-align: center;
+            padding: 0.5rem;
+        }
+
+        .miracle-info h3 {
+            margin-bottom: 0.3rem;
+        }
+
+        .miracle-info p {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .miracle-content {
+            padding: 1.5rem;
+        }
+
+        .miracle-content p {
+            margin-bottom: 1rem;
+        }
+
+        .lesson {
+            display: inline-block;
+            background: var(--success);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-top: 0.5rem;
+        }
+
+        .bible-verse {
+            background: #f8f9fa;
+            border-left: 4px solid var(--gold);
+            padding: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+        }
+
+        .conclusion {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .conclusion h2 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .conclusion p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: var(--secondary);
+        }
+
+        footer {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .social-links {
+            margin: 1.5rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--gold);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .themes-grid, .miracles-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .theme-header, .miracle-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .theme-icon, .miracle-reference {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Miracles of the Bible</h1>
+            <p class="subtitle">Witness God's Power, Love, and Mercy Through Scriptural Accounts</p>
+            <p class="verse">"Jesus did many other things as well. If every one of them were written down, I suppose that even the whole world would not have room for the books that would be written." - John 21:25</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="intro">
+            <h2>God's Power Revealed Through Miracles</h2>
+            <p>The Bible is filled with accounts of miracles that demonstrate God's sovereignty, Jesus' divinity, and important spiritual truths for believers. These supernatural events reveal God's character and His relationship with humanity.</p>
+        </section>
+
+        <section class="themes-section">
+            <h2 class="section-title">Biblical Truths Revealed Through Miracles</h2>
+            
+            <div class="themes-grid">
+                <!-- Theme 1 -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div class="theme-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <div class="theme-info">
+                            <h3>God's Love is Everlasting</h3>
+                        </div>
+                    </div>
+                    <div class="theme-content">
+                        <p>Throughout Scripture, God's miracles demonstrate His unfailing love and compassion for His people, even when they are undeserving.</p>
+                        <div class="bible-verse">
+                            "The Lord appeared to us in the past, saying: 'I have loved you with an everlasting love; I have drawn you with unfailing kindness.'" - Jeremiah 31:3
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Theme 2 -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div class="theme-icon">
+                            <i class="fas fa-cross"></i>
+                        </div>
+                        <div class="theme-info">
+                            <h3>Jesus is the Son of God</h3>
+                        </div>
+                    </div>
+                    <div class="theme-content">
+                        <p>Jesus' miracles served as divine authentication of His identity as the Messiah and Son of God.</p>
+                        <div class="bible-verse">
+                            "But these are written that you may believe that Jesus is the Messiah, the Son of God, and that by believing you may have life in his name." - John 20:31
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Theme 3 -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div class="theme-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="theme-info">
+                            <h3>With God Everything is Possible</h3>
+                        </div>
+                    </div>
+                    <div class="theme-content">
+                        <p>Biblical miracles show that nothing is too difficult for God, who created and sustains the universe.</p>
+                        <div class="bible-verse">
+                            "Jesus looked at them and said, 'With man this is impossible, but with God all things are possible.'" - Matthew 19:26
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Theme 4 -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div class="theme-icon">
+                            <i class="fas fa-pray"></i>
+                        </div>
+                        <div class="theme-info">
+                            <h3>Faith is Essential</h3>
+                        </div>
+                    </div>
+                    <div class="theme-content">
+                        <p>Miracles in the Bible often occurred in response to faith, demonstrating its vital role in our relationship with God.</p>
+                        <div class="bible-verse">
+                            "And without faith it is impossible to please God, because anyone who comes to him must believe that he exists and that he rewards those who earnestly seek him." - Hebrews 11:6
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Theme 5 -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div class="theme-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="theme-info">
+                            <h3>Focus on Jesus</h3>
+                        </div>
+                    </div>
+                    <div class="theme-content">
+                        <p>When we keep our eyes fixed on Jesus, we can overcome obstacles that would otherwise be impossible.</p>
+                        <div class="bible-verse">
+                            "Let us run with perseverance the race marked out for us, fixing our eyes on Jesus, the pioneer and perfecter of faith." - Hebrews 12:1-2
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Theme 6 -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div class="theme-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <div class="theme-info">
+                            <h3>God is Merciful</h3>
+                        </div>
+                    </div>
+                    <div class="theme-content">
+                        <p>God's miracles frequently demonstrate His mercy and compassion toward those in need.</p>
+                        <div class="bible-verse">
+                            "The Lord is compassionate and gracious, slow to anger, abounding in love." - Psalm 103:8
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Theme 7 -->
+                <div class="theme-card">
+                    <div class="theme-header">
+                        <div class="theme-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="theme-info">
+                            <h3>Believers Can Do Great Things</h3>
+                        </div>
+                    </div>
+                    <div class="theme-content">
+                        <p>Through the power of the Holy Spirit, Jesus' followers can continue His miraculous work.</p>
+                        <div class="bible-verse">
+                            "Very truly I tell you, whoever believes in me will do the works I have been doing, and they will do even greater things than these, because I am going to the Father." - John 14:12
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="miracles-section">
+            <h2 class="section-title">Miracles From Scripture</h2>
+            
+            <div class="miracles-grid">
+                <!-- Miracle 1 -->
+                <div class="miracle-card">
+                    <div class="miracle-header">
+                        <div class="miracle-reference">
+                            John 2:1-11
+                        </div>
+                        <div class="miracle-info">
+                            <h3>Water to Wine</h3>
+                            <p>Jesus' First Miracle</p>
+                        </div>
+                    </div>
+                    <div class="miracle-content">
+                        <p>At a wedding in Cana, Jesus turned water into wine when the host ran out, saving the family from embarrassment.</p>
+                        <div class="bible-verse">
+                            "What Jesus did here in Cana of Galilee was the first of the signs through which he revealed his glory; and his disciples believed in him." - John 2:11
+                        </div>
+                        <p><strong>Lesson:</strong> Jesus cares about our everyday needs and celebrations.</p>
+                        <span class="lesson">Jesus is the Son of God</span>
+                    </div>
+                </div>
+
+                <!-- Miracle 2 -->
+                <div class="miracle-card">
+                    <div class="miracle-header">
+                        <div class="miracle-reference">
+                            Mark 4:35-41
+                        </div>
+                        <div class="miracle-info">
+                            <h3>Calming the Storm</h3>
+                            <p>Jesus Commands Nature</p>
+                        </div>
+                    </div>
+                    <div class="miracle-content">
+                        <p>While Jesus and His disciples were crossing the sea, a furious storm arose. Jesus rebuked the wind and waves, bringing immediate calm.</p>
+                        <div class="bible-verse">
+                            "He got up, rebuked the wind and said to the waves, 'Quiet! Be still!' Then the wind died down and it was completely calm." - Mark 4:39
+                        </div>
+                        <p><strong>Lesson:</strong> Jesus has authority over all creation, and we can trust Him in life's storms.</p>
+                        <span class="lesson">With God Everything is Possible</span>
+                    </div>
+                </div>
+
+                <!-- Miracle 3 -->
+                <div class="miracle-card">
+                    <div class="miracle-header">
+                        <div class="miracle-reference">
+                            John 11:1-44
+                        </div>
+                        <div class="miracle-info">
+                            <h3>Raising Lazarus</h3>
+                            <p>Victory Over Death</p>
+                        </div>
+                    </div>
+                    <div class="miracle-content">
+                        <p>Jesus raised His friend Lazarus from the dead after he had been in the tomb for four days, demonstrating His power over death.</p>
+                        <div class="bible-verse">
+                            "Jesus said to her, 'I am the resurrection and the life. The one who believes in me will live, even though they die.'" - John 11:25
+                        </div>
+                        <p><strong>Lesson:</strong> Jesus has power over death and offers eternal life to believers.</p>
+                        <span class="lesson">God's Love is Everlasting</span>
+                    </div>
+                </div>
+
+                <!-- Miracle 4 -->
+                <div class="miracle-card">
+                    <div class="miracle-header">
+                        <div class="miracle-reference">
+                            Matthew 14:22-33
+                        </div>
+                        <div class="miracle-info">
+                            <h3>Walking on Water</h3>
+                            <p>Peter's Faith Tested</p>
+                        </div>
+                    </div>
+                    <div class="miracle-content">
+                        <p>Jesus walked on water during a storm. Peter stepped out in faith but began to sink when he took his eyes off Jesus.</p>
+                        <div class="bible-verse">
+                            "Immediately Jesus reached out his hand and caught him. 'You of little faith,' he said, 'why did you doubt?'" - Matthew 14:31
+                        </div>
+                        <p><strong>Lesson:</strong> When we focus on Jesus, we can do the impossible, but doubt causes us to sink.</p>
+                        <span class="lesson">Focus on Jesus</span>
+                    </div>
+                </div>
+
+                <!-- Miracle 5 -->
+                <div class="miracle-card">
+                    <div class="miracle-header">
+                        <div class="miracle-reference">
+                            Luke 17:11-19
+                        </div>
+                        <div class="miracle-info">
+                            <h3>Healing Ten Lepers</h3>
+                            <p>Only One Returns</p>
+                        </div>
+                    </div>
+                    <div class="miracle-content">
+                        <p>Jesus healed ten lepers, but only one returned to thank Him. Jesus noted the faith of the one who returned.</p>
+                        <div class="bible-verse">
+                            "Then he said to him, 'Rise and go; your faith has made you well.'" - Luke 17:19
+                        </div>
+                        <p><strong>Lesson:</strong> God's mercy extends to all, but gratitude and faith please Him.</p>
+                        <span class="lesson">Faith is Essential</span>
+                    </div>
+                </div>
+
+                <!-- Miracle 6 -->
+                <div class="miracle-card">
+                    <div class="miracle-header">
+                        <div class="miracle-reference">
+                            Acts 3:1-10
+                        </div>
+                        <div class="miracle-info">
+                            <h3>Healing at Beautiful Gate</h3>
+                            <p>Peter and John's Miracle</p>
+                        </div>
+                    </div>
+                    <div class="miracle-content">
+                        <p>Peter and John healed a lame man at the temple gate, demonstrating that Jesus' followers continue His work through the Holy Spirit.</p>
+                        <div class="bible-verse">
+                            "Then Peter said, 'Silver or gold I do not have, but what I do have I give you. In the name of Jesus Christ of Nazareth, walk.'" - Acts 3:6
+                        </div>
+                        <p><strong>Lesson:</strong> Jesus' followers can do great things in His name through the power of the Holy Spirit.</p>
+                        <span class="lesson">Believers Can Do Great Things</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="conclusion">
+            <h2>The Miracle of Salvation</h2>
+            <p>The greatest miracle is the transformation that occurs when someone places their faith in Jesus Christ. Through His death and resurrection, Jesus offers forgiveness of sins and eternal life to all who believe.</p>
+            <div class="bible-verse">
+                "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life." - John 3:16
+            </div>
+            <a href="#" class="btn">Learn More About Salvation</a>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Biblical Miracles</h3>
+            <p>Exploring God's Power and Love Through Scripture</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2023 Biblical Miracles. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
